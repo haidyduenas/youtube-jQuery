@@ -222,3 +222,11 @@ body {
     top: 5%;
     left: 15%
   }
+  #cont-root{
+    position: absolute;
+    top:20%;
+  }
+  .miniaturas{
+    display: inline-block;
+
+  }

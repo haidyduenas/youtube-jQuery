@@ -22,10 +22,13 @@ class Youtube {
          const imageUrl = video.snippet.thumbnails.default.url;
          const url = `https://www.youtube.com/embed/${video.id.videoId}`;
          return `<li>\
-                     <img class="media-object" src=${imageUrl} />\
+                     <div class="col-xs-13 col-md-3 col-lg-3">\
+                     <img class="media-object miniaturas" src=${imageUrl} />\
+                     </div>
                      <p>\
-                        <iframe class="embed-responsive-item" src=${url}> </iframe>\
+                        <iframe class="col-xs-8 col-lg-8 col-md-8 embed-responsive-item" src=${url}> </iframe>\
                      </p>\
+                     </div>\
                </li> \ `;
       });
    }
@@ -44,7 +47,7 @@ class Youtube {
          $("#root").append(list);
       });
    }
-/*
+
    videoSearch(searchTerm) {
       jQuery.getJSON("list.json", data => {
          console.log("result", data.items);
@@ -58,7 +61,6 @@ class Youtube {
          $("#root").append(list);
       });
    }
-*/
 }
 
 let video = new Youtube();
